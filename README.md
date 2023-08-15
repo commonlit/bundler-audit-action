@@ -1,4 +1,5 @@
 <!-- Variables -->
+
 [changelog]: /CHANGELOG.md
 [coc]: /CODE_OF_CONDUCT.md
 [contributing]: /CONTRIBUTING.md
@@ -20,14 +21,12 @@ name: Bundler Audit
 on: [push]
 
 jobs:
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: 'Bundler Audit'
-        uses: andrewmcodes/bundler-audit-action@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    audit:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: "Bundler Audit"
+              uses: commonlit/bundler-audit-action@main
 ```
 
 ## Community
